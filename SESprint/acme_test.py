@@ -15,7 +15,13 @@ class AcmeProductTests(unittest.TestCase):
         prod = Product('Test Product')
         self.assertEqual(prod.weight,20)
 
+    def test_stealability(self):
+        """us 5 stealability"""
+        prod=Product('Test Product')
 
+        self.assertLessEqual(.3, .5)
+        self.assertGreaterEqual(.7,.5)
+        
 class AcmeReportTests(unittest.TestCase):
     def test_num_product_default(self):
         #test default product number being 30
